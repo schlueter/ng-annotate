@@ -311,3 +311,67 @@ var errorstringArray = res.errors;
 var transformedSource = res.src;
 var transformedSourceMap = res.map;
 ```
+
+## Options
+
+These options may be provided in the *options* object:
+
+#### __a__ or __add__
+
+add dependency injection annotations where non-existing
+type: `Boolean`
+default: `true`
+
+#### __r__ or __remove__
+
+remove all existing dependency injection annotations
+type: `Boolean`
+default: `true`
+  
+#### __o__
+
+write output to <file>. output is written to stdout by default
+type: `string`
+default: `undefined` 
+
+#### sourcemap
+
+generate an inline sourcemap
+type: `Boolean`
+default: `true`
+
+#### sourceroot
+
+set the sourceRoot property of the generated sourcemap
+type: `String`
+default: `undefined`
+
+#### single_quotes
+
+use single quotes (`'`) instead of double quotes (`"`)
+type: `Boolean`
+default: `true`
+
+#### regexp
+
+detect short form myMod.controller(...) iff myMod matches regexp
+type: `RegExp`
+default: `undefined`
+
+#### rename
+
+rename declarations and annotated references
+type: `String` of format `'oldname1 newname1 oldname2 newname2 <...>'`
+default: `''`
+
+#### plugin
+
+use plugin with path (experimental)
+type: `Array`
+default `undefined`
+
+#### stats
+
+print statistics on stderr (experimental)
+type: `Boolean`
+default: `true`
