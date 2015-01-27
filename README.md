@@ -316,7 +316,7 @@ var transformedSourceMap = res.map;
 
 These options may be provided in the *options* object:
 
-#### a, add
+### a, add
 
 add dependency injection annotations where non-existing
 
@@ -324,23 +324,43 @@ type: `Boolean`
 
 default: `true`
 
-#### r, remove
+#### Examples
+
+```js
+options = {a: false}
+options = {add: false}
+```
+
+### r, remove
 
 remove all existing dependency injection annotations
 
 type: `Boolean`
 
 default: `true`
+
+#### Example
+
+```js
+options = {r: false}
+options = {remove: false}
+```
   
-#### o
+### o
 
 write output to <file>. output is written to stdout by default
 
 type: `string`
 
-default: `undefined` 
+default: `undefined`
 
-#### sourcemap
+#### Example
+
+```js
+options = {o: 'annotated-file.js'}
+```
+
+### sourcemap
 
 generate an inline sourcemap
 
@@ -348,7 +368,13 @@ type: `Boolean`
 
 default: `true`
 
-#### sourceroot
+#### Example
+
+```js
+options = {sourcemap: false}
+```
+
+### sourceroot
 
 set the sourceRoot property of the generated sourcemap
 
@@ -356,7 +382,13 @@ type: `String`
 
 default: `undefined`
 
-#### single_quotes
+#### Example
+
+```js
+options = {sourceroot: '../js/'}
+```
+
+### single_quotes
 
 use single quotes (`'`) instead of double quotes (`"`)
 
@@ -364,7 +396,13 @@ type: `Boolean`
 
 default: `true`
 
-#### regexp
+#### Example
+
+```js
+options = {single_quotes: false}
+```
+
+### regexp
 
 detect short form myMod.controller(...) iff myMod matches regexp
 
@@ -372,7 +410,13 @@ type: `RegExp`
 
 default: `undefined`
 
-#### rename
+#### Example
+
+```js
+options = {regexp: /myMod/}
+```
+
+### rename
 
 rename declarations and annotated references
 
@@ -380,7 +424,13 @@ type: `String` of format `'oldname1 newname1 oldname2 newname2 <...>'`
 
 default: `''`
 
-#### plugin
+#### Example
+
+```js
+options = {rename: 'oldname1 newname1 oldname2 newname2'}
+```
+
+### plugin
 
 use plugin with path (experimental)
 
@@ -388,10 +438,22 @@ type: `Array`
 
 default `undefined`
 
-#### stats
+#### Example
+
+```js
+options = {plugin: ['path/to/plugin1']}
+```
+
+### stats
 
 print statistics on stderr (experimental)
 
 type: `Boolean`
 
 default: `true`
+
+#### Example
+
+```js
+options = {stats: false}
+```
