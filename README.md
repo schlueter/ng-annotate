@@ -316,7 +316,7 @@ var transformedSourceMap = res.map;
 
 These options may be provided in the *options* object:
 
-#### __a__ or __add__
+#### a, add
 
 add dependency injection annotations where non-existing
 
@@ -324,7 +324,7 @@ type: `Boolean`
 
 default: `true`
 
-#### __r__ or __remove__
+#### r, remove
 
 remove all existing dependency injection annotations
 
@@ -332,7 +332,7 @@ type: `Boolean`
 
 default: `true`
   
-#### __o__
+#### o
 
 write output to <file>. output is written to stdout by default
 
